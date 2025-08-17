@@ -69,29 +69,29 @@ function Login() {
           src={background_image}
           alt="background_image"
         />
-        <div className="bg-black/90 text-white rounded-lg absolute top-36 left-1/2 transform -translate-x-1/2 py-12 px-16 w-4/12">
+        <div className="bg-black/90 text-white rounded-lg absolute top-36 md:left-1/2 md:transform w-full md:-translate-x-1/2 py-5 px-5 md:py-8 md:px-10 lg:py-10 lg:px-12 md:w-6/12 lg:w-4/12">
         <form onSubmit={(e)=>e.preventDefault()}>
-          <h1 className="text-3xl font-bold my-3">
+          <h1 className="text-2xl md:text-3xl font-bold my-3">
             {isSignIn ? "Sign In" : "Sign up"}
           </h1>
           {!isSignIn && (
             <input
-              className="w-full border border-neutral-400 p-3 rounded-md my-2"
+              className="w-full border border-neutral-400 focus:outline-none p-3 rounded-md my-2"
               ref={nameInput}
               type="text"
               placeholder="Name"
             />
           )}
           <input
-            className="w-full border border-neutral-400 p-3 rounded-md my-2"
+            className="w-full border border-neutral-400 focus:outline-none p-3 rounded-md my-2"
             ref={emailInput}
-            type="text"
+            type="email"
             placeholder="Email"
           />
           <input
-            className="w-full border border-neutral-400 p-3 rounded-md my-2"
+            className="w-full border border-neutral-400 focus:outline-none p-3 rounded-md my-2"
             ref={passwordInput}
-            type="text"
+            type="password"
             placeholder="Password"
           />
           <button onClick={handleSubmit} className="w-full bg-red-600 text-white p-3 rounded-md my-2 cursor-pointer">

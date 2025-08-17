@@ -1,4 +1,7 @@
 const MovieCard = ({poster_key}) => {
+
+  if(!poster_key) return;
+
   return (
     <div>
       <div className="shrink-0 w-44">
